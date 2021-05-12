@@ -1,0 +1,14 @@
+function validateForm(){
+				var email=document.forms.myForm.email.value;
+				var name=document.forms.myForm.uname.value;
+				var password=document.forms.myForm.pword.value;
+				var confirmPS=document.forms.myForm.cpword.value;
+				
+				if (email=="" || name=="" || password=="" || confirmPS=="" || email.length>60 || name.length>40 || password.length!=8 || password!=confirmPS){
+					alert("The following fields must be filled out:\nEmail:\nUsername:\nPassword:\nConfirm password:\nPassword has to be 8 characters long!\nThe email has maximum 60 characters!\nThe username has maximum 40 characters!\nThe password must be 8 characters!\nThe \"Password\" and \"Confirm Password\" has to be matched!");
+					return false;
+				}
+				else{
+					alert("Email: "+email+"\nUsername: "+name+"\nPassword: "+password+"\nConfirm Possword: "+confirmPS+"\nYou have successfully registered. Thank you!");;
+					return true;}
+				}
